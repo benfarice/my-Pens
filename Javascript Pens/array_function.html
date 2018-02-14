@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Learn JavaScript By Shahzaib Kamal</title>		
+	</head>
+	<body>
+		<script>
+			var arr_1 = ['Apple','Mango','Banana'];
+			document.write(arr_1.length);
+			
+			document.write('<br>');
+			arr_1[arr_1.length] = 'Grapes';
+			arr_1.unshift('Pinapple');
+			
+			document.write(arr_1);
+			
+			arr_length = arr_1.push('Orange');
+		
+			document.write('<br>');
+			document.write(arr_1);
+			
+			document.write('<br>');
+			document.write(arr_length );
+			
+			arr_1.pop();
+			
+			document.write('<br>');
+			document.write(arr_1);
+			
+			arr_1.shift();
+			
+			document.write('<br>');
+			document.write(arr_1);
+			
+			delete arr_1[2];
+			
+			document.write('<br>');
+			document.write(arr_1);
+			
+			arr_1.splice(3, 0, 'Lemon', 'Guava');
+			
+			document.write('<br>');
+			document.write(arr_1);
+			
+			arr_1.splice(2, 2);
+			
+			document.write('<br>');
+			document.write(arr_1);
+		</script>
+		
+	</body>

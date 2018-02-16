@@ -8,8 +8,23 @@
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/angular.min.js"></script>
 </head>
-<body>
+<body ng-app>
 	<div>imzoughene</div>
-	<div ng-app>{{5+5}}</div>
+	<div>5 + 5 = {{5+5}}</div>
+	<br>
+	<div>
+		<label>user name</label>
+		<input type="text" name="" ng-model="imzoughene">
+		<hr>
+		<div>{{imzoughene}}</div>
+	</div>
+	<div>
+		<label>imzoughene1</label>
+		<input type="number" name="" ng-model="imzoughene1">
+		<label>imzoughene2</label>
+		<input type="number" name="" ng-model="imzoughene2">
+		<hr>
+		<div>{{imzoughene1 * imzoughene2}}</div>
+	</div>
 </body>
 </html>

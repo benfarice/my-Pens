@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn Tooltip</title>
+	<link rel="stylesheet" 
+	type="text/css" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.color.min.js"> 	
+    </script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$('[data-toggle="tooltip"]').tooltip();
+    		$('[data-toggle="popover"]').popover();
+    	});
+    </script>
+</head>
+<body>
+	<div class="container">
+		<br><br><br><br>
+		<a href="#" title="imzoughene youssef" data-toggle="tooltip">my name is imzoughene youssef</a>
+		<br><br><br><br>
+		<a href="#" title="imzoughene youssef" data-toggle="tooltip"
+		data-placement="left">my name is imzoughene youssef</a>
+		<br><br><br><br>
+		<a href="#" title="imzoughene youssef" data-toggle="tooltip"
+		data-placement="right">my name is imzoughene youssef</a>
+		<br><br><br><br>
+		<a href="#" title="imzoughene youssef" data-toggle="tooltip"
+		data-placement="bottom">my name is imzoughene youssef</a>
+		<br><br><br><br>
+		<a href="#" title="imzoughene youssef" data-toggle="tooltip"
+		data-placement="top">my name is imzoughene youssef</a>
+		<br><br><br><br>
+		<a href="#" data-toggle="popover" title="the popover" data-content="the popover content ! can you see this">The popover</a>
+		<br><br><br><br>
+		<a href="#" data-toggle="popover" data-trigger="hover" title="the popover" data-content="the popover content ! can you see this">The popover</a>
+		<br><br><br><br>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn Ajax</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.color.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+	<button class="btn btn-primary" onclick="ajax_func()">
+		Click to retrieve data
+	</button>
+	<div id="get_data">
+		
+	</div>
+	<script type="text/javascript">
+		function ajax_func(){
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function(){
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+					document.getElementById('get_data').innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open('GET','ajax_php.php',true);
+			xmlhttp.send();
+		}
+	</script>
+</body>
+</html>

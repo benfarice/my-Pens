@@ -4,6 +4,7 @@
 	<title>Learn Jquery</title>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.color.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript">
     	$(document).ready(function(){
@@ -42,16 +43,78 @@
 		    $('div').mouseup(function(){
     			$('div').fadeOut();
     		});
-    		*/
+
+    		//*******************
 
     		$('div').mousedown(function(){
     			$('div').fadeOut();
     		});
 
+			//**************************************
+
+			$('div').click(function(){
+    			$(this).fadeOut();
+    		});
+			
+			//----------------------
+
+			$('div').click(function(){
+    			$(this).hide();
+    		});
+
+    		//***********************
+
+    		$('div').click(function(){
+    			$(this).show();
+    		});
+            
+            $('div').click(function(){
+                $(this).toggle();
+            });
+            
+            $('button').click(function(){
+                $('#div2').fadeOut();
+                $('#div3').fadeIn();
+                //$('#div1').fadeToggle();
+                //$('#div1').slideUp();
+                //$("#div1").slideDown();
+                $("#div1").slideToggle();
+            });
+
+    		*/
+    		$('#div1').click(function(){
+                $(this).animate({
+                    height:'150px',
+                    width:'150px',
+                    opacity : '.4',
+                    marginLeft : '420px',
+                    backgroundColor:'blue'
+                });
+            });
+
+            $('#div2').click(function(){
+                $(this).animate({
+                    height:'150px',
+                    width:'150px',
+                    opacity : '.4',
+                    marginLeft : '420px',
+                    backgroundColor:'blue'
+                });
+                $(this).animate({
+                    height:'250px',
+                    width:'250px',
+                    opacity : '.7',
+                    marginLeft : '320px',
+                    backgroundColor:'gray'
+                });
+            });
     	});
     </script>
 </head>
 <body>
-	<div style="background-color: orange;width: 500px;height: 300px;"></div>
+    <button>click me</button>
+	<div id="div1" style="background-color: orange;width: 300px;height: 300px;"></div>
+	<div id="div2" style="background-color: red;width: 500px;height: 300px;"></div>
+	<div id="div3" style="background-color: green;width: 500px;height: 300px;"></div>
 </body>
 </html>

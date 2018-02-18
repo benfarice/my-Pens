@@ -35,3 +35,11 @@ header p{
 	padding: 5px;
 	background-color: #f1f1f1;
 }
+.thumbnail img{
+	width: 350px;
+	height: 230px;
+}
+.about_para{
+	font-size: 18px;
+	line-height: 30px;
+}

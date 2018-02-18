@@ -82,7 +82,8 @@
             });
 
     		*/
-    		$('#div1').click(function(){
+    		/*
+            $('#div1').click(function(){
                 $(this).animate({
                     height:'150px',
                     width:'150px',
@@ -115,11 +116,20 @@
              $('#div3').click(function(){
                 $(this).slideUp(5000);
             });
-
+            
+            $("#btn1").click(function(){
+                $("#para1").append("hello imzoughene ! you're the best");
+            });
+            */
+             $("#btn1").click(function(){
+                $("#para1")
+                .append("hello <u>imzoughene</u> ! you're the best<br>");
+            });
     	});
     </script>
 </head>
 <body>
+    <!--
     <button class="btn btn-primary">click me</button>
     <hr>
     <div id="div2" style="background-color: red;width: 500px;height: 300px;"></div>
@@ -128,5 +138,14 @@
     <hr>
 
 	<div id="div3" style="background-color: green;width: 500px;height: 300px;"></div>
+    -->
+    <div class="container">
+          <button id="btn1" class="btn btn-primary">
+          Add more content
+          </button>
+          <br>
+          <p id="para1" class="text-info"></p>
+    </div>
+  
 </body>
 </html>

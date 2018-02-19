@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn Angular</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.color.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body>
+	
+	<div ng-app="module_name">
+		<div my-Dir>
+			
+		</div>
+		<br>
+		<my-Dir></my-Dir>
+	</div>
+	<script type="text/javascript">
+		var imzoughene = angular.module('module_name',[]);
+		imzoughene.directive('myDir',function(){
+			return {
+				template : 'this is the newly created Directive ! '
+			};
+		});
+	</script>
+</body>
+</html>

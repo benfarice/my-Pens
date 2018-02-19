@@ -7,6 +7,14 @@
     <script type="text/javascript" src="../js/jquery.color.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/angular.min.js"></script>
+    <style type="text/css">
+    	.first{
+    		background-color: lightblue;
+    	}
+    	.second{
+    		background-color: lightgreen;
+    	}
+    </style>
 </head>
 <body ng-app>
 	<div>imzoughene</div>
@@ -18,13 +26,87 @@
 		<hr>
 		<div>{{imzoughene}}</div>
 	</div>
-	<div>
+	<input type="text" name="" ng-model="youssef">
+	<div ng-class="youssef">
 		<label>imzoughene1</label>
-		<input type="number" name="" ng-model="imzoughene1">
+		<input type="number" name="" ng-model="imzoughene1" ng-init="imzou1=48" value="{{imzou1}}">
 		<label>imzoughene2</label>
-		<input type="number" name="" ng-model="imzoughene2">
+		<input type="number" name="" ng-model="imzoughene2" ng-init="imzou2=61" value="{{imzou2}}">
 		<hr>
 		<div>{{imzoughene1 * imzoughene2}}</div>
+		<div ng-bind="15+15"></div>
+	</div>
+	<!-- ng-show -->
+	<div>
+		<label>
+			Show or hide Html
+		</label>
+		<input type="checkbox" ng-model="show_hide" name="">
+		<div ng-show="show_hide">
+			<h2>Show or Hide</h2>
+			<p>we can hide or show the html content using some angularJs directives</p>
+		</div>
+	</div>
+
+	<!-- ng-open  -->
+	<div>
+		<label>Open or Close the Details Tag</label>
+		<input type="checkbox" ng-model="open_close" name="">
+		<details ng-open="open_close">
+			<summary>
+				The Summary
+			</summary>
+			<p>this is the detailed area</p>
+		</details>
+	</div>
+
+	<!-- ng-selected -->
+
+	<div>
+		<label>
+			Select any Option :
+		</label>
+		<input type="checkbox" name="" ng-model="imzoughene_selected">
+		<select>
+			<option>Select any item</option>
+			<option>Stone</option>
+			<option>Metal</option>
+			<option ng-selected="imzoughene_selected">Plastic</option>
+			<option>Gas</option>
+		</select>
+	</div>
+
+	<!-- ng-required -->
+
+	<div>
+		<form>
+			<label>Make required : </label>
+			<input type="checkbox" name="" ng-model="imzoughene_req_or_no">
+			<input type="text" ng-required="imzoughene_req_or_no" name="">
+			<button>Send</button>
+		</form>
+		
+	</div>
+
+	<!-- ng-repeat -->
+
+	<div ng-init="cars=['Toyota','Honda','BMW','Mercedes']">
+		<ol>
+			<li ng-repeat="x in cars">{{x}}</li>
+		</ol>
+		<br>
+		<ol type="A">
+			<li ng-repeat="x in cars" ng-bind="x"></li>
+		</ol>
+		
+	</div>
+
+	<!-- ng-list -->
+
+	<div>
+		<label>Create an Array</label>
+		<input type="" name="" ng-model="imzou_create_array" ng-list>
+		<div>{{ imzou_create_array }}</div>
 	</div>
 </body>
 </html>

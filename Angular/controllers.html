@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn Angular</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.color.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="imzoughene" ng-controller="imzou_controller">
+        <input type="text" ng-model="brother1" placeholder="brother1"
+        class="form-control">
+        <input type="text" ng-model="brother2" placeholder="brother2"
+         class="form-control">
+        <p>my brothers are  {{ brother1 + ' and '+brother2 }}</p>
+       
+    </div>
+    <script>
+        var imzoughene = angular.module("imzoughene",[]);
+        imzoughene.controller('imzou_controller',function($scope){
+            $scope.brother1 = 'hamid';
+            $scope.brother2 = 'aziz';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+ .container{
+            background-color: silver;
+            height: 500px;
+        }
+.right{
+            background-color: gray;
+            height: 500px;
+            padding: 50px;
+        }
+.left{
+           
+            height: 500px;
+            padding: 50px;
+        }

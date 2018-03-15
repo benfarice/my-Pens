@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my ajax with jquery</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<style type="text/css">
+		#box{
+			background: gray;
+			text-align: center;
+			padding: 10px;
+			color: white;
+			width: 500px;
+			margin: 0 auto;
+			height: 200px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#sub').click(function(){
+			$.post("ajax/ajax_jquery.php",function(data){
+				$('#result').html(data);
+			});
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div id="box">
+		<h2>new user register here</h2>
+		<input type="text" name="name"
+		placeholder="enter your name"
+		 id="name">
+		 <br><br>
+		<input type="submit" name="sub"
+		value="send" id="sub">
+		<div id="result"></div>
+	</div>
+</body>
+</html>

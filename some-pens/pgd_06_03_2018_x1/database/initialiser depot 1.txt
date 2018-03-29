@@ -1,0 +1,18 @@
+	UPDATE detailMouvements
+			SET
+			   UniteVente='Colisage' WHERE  idMouvement=6390  and idDepot=1
+
+			    DELETE FROM mouvements WHERE idDepot=1 AND   date <  convert(date, '29/12/2017' ) and type LIKE 'Entree'
+ DELETE FROM detailMouvements WHERE idDepot=1 AND idMouvement NOT IN
+		(SELECT idMouvement FROM mouvements )
+
+
+  DELETE FROM mouvements WHERE idDepot=1 AND type LIKE 'Sortie'
+ DELETE FROM detailMouvements WHERE idDepot=1 AND idMouvement NOT IN
+		(SELECT idMouvement FROM mouvements )
+
+		DELETE  FROM factures  WHERE idDepot=1
+		DELETE FROM detailfactures WHERE idDepot=1 AND idFacture NOT IN
+		(SELECT IdFacture FROM factures )
+		DELETE FROM Avance WHERE IdDepot=1
+		DELETE FROM avoir_client WHERE IdDepot=1

@@ -1,0 +1,40 @@
+.Head{
+background:#085ba1;
+}
+.heaLeft{ 
+background:url(../../images/head_left.jpg) repeat;
+height:80px;
+
+
+}
+.Info{
+	color:#fff;
+	font-size: 28px;
+}
+.headRight{
+background:url(../../images/head_right.jpg) no-repeat;
+height:80px;
+
+}
+.signout {
+    background: url(../../images/deconnexion.png) no-repeat;
+    height: 69px;
+  	width: 65px;
+}
+
+.page {
+    direction: ltr;
+}
+.Info {
+    padding: 19px 0px 19px 10px;
+}
+table thead.Fixed
+{
+    position: absolute;
+    /*width: 100%;*/
+    background-color: white;
+}
+.fixed_designation{
+	width: 40%;
+}
+

@@ -1,0 +1,110 @@
+body{	margin:0px; }
+#page{
+	width:210mm;/*width:1280px;*/
+	height:291mm;
+	overflow:hidden;
+	background-color:#FFF;
+	margin:0 auto;
+	padding:5mm;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+}
+#piedPage{
+font-family:Arial, Helvetica, sans-serif;
+	font-size:12pt;
+	font-size:8pt;
+	border-top:1px solid #999900;
+	margin:0 auto;
+	width:210mm;
+	padding:2mm 5mm;
+	text-align:center;
+	position:relative;
+	margin-bottom:0mm;
+}
+.clear{	clear:both;}
+#page div{	
+
+ }
+#boxLogo{
+	float:left;
+	padding-top:0mm;
+}
+#boxClient{
+	float:right;
+	width:70mm;
+	height:40mm;
+	margin-bottom:5mm;
+	text-align:center;
+	overflow:hidden;
+	padding:2mm 3mm;;
+	border:1px solid #888888;
+	background-color:#E9E9E9;
+	
+	-moz-border-radius:10px;
+}
+#boxClient #nomClient{
+	margin:3mm;
+	font-weight:bold;
+	font-size:13pt;
+}
+#boxInfos{
+	width:80mm;
+	margin-bottom:10mm;
+	border:1px solid #888888;
+	background-color:#E9E9E9;
+	font-size:11pt;
+	padding:3mm;
+	-moz-border-radius:10px;
+	margin-top:0mm;
+	Popacity:0.7;
+	font-size:15px;
+}
+#boxInfos #etatFacture.ko{ font-weight:bold; font-size:13pt; text-decoration:underline;	}
+
+#boxContenu{font-size:10pt;}
+#boxContenu td{
+	border:1px solid #888888;
+	padding:1mm;
+	-moz-border-radius:10px;
+	
+}
+#boxContenu .headerTab{
+	border:1px solid #888888;
+	background-color:#E5E5E5;
+	Popacity:0.7;
+	font-weight:bold;
+	padding:1mm;
+	text-align:center;	
+	color:#666666;
+	font-size:15px;
+	
+}
+#boxContenu td.prestation{
+padding:2mm 5mm;
+font-size:15px;
+}
+#boxContenu td.montant{
+text-align:right;
+padding-right:2mm;
+vertical-align:middle;
+font-size:15px;
+}
+.headerTab#total{
+	text-align:right;
+	padding-right:5mm;
+}
+.montant#total{	font-weight:bold;}	
+
+#boxPied{
+	
+}
+.infoSte{float:left;width:50%;}
+.infoClt{float:right;width:50%;}
+.Fermer{
+	float:right;
+	background:url(../images/close80.png);
+	border:0;
+	width:80px;
+	height:80px;
+	cursor:pointer;
+}

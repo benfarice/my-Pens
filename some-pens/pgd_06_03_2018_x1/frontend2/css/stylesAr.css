@@ -1,0 +1,112 @@
+body {
+	font-family: Arial,sans-serif;
+	font-size:18px; 
+	margin:0 auto;
+	direction:rtl;
+}
+.page{
+	direction:rtl;
+}
+.heaLeft{ 
+	float:right;
+}
+.headRight{ 
+	float:left;
+}
+.signout{
+	float:left; 
+}
+.titleIndex1{
+	font-size:26px;
+}
+.Info{
+	padding:19px 10px 19px 0px;
+}
+.bx-wrapper .bx-viewport{ 
+	direction: ltr; 
+}
+.divLeftArt {
+	float:right;
+}
+.divRight {
+	float:left;
+}
+.DetailGamme{
+	text-align:left;
+}
+.divLeft {
+	float:right;
+}
+input,textarea{
+padding-right:15px; 
+font-size:33px;
+}
+.filtre input {
+    width: 97%;
+}
+.ligne>.divArticle{	TEXT-align:right;}
+#popup_title {TEXT-align:right; padding-right:10px;}
+#popup_content {
+    background: 554px 55px no-repeat url(images/infoDialog.gif);
+    padding: 3em 3.75em;
+}
+#popup_message {
+    padding-left: 0px;
+}
+.Right{
+		float:left;
+}
+
+.entete {
+font-size:22px;}
+.divArticleL {
+	text-align:right;
+}
+.divArticleWidth{
+	width:300px;
+}
+.width256{
+	width:243px;
+}
+.closebtn{
+	float:left;
+}
+
+/********************CHarifa**********************/
+/******Login*****/
+.form-top-left {
+    float: right;
+    width: 65%;
+	text-align:right;	
+}
+.form-top-right {
+    float: right;
+    width: 100%;
+    padding-top: 5px;
+    font-size: 66px;
+    color: #ddd;
+    line-height: 100px;
+    text-align: center;
+}
+/*********Map***************/
+/******Select*******/
+.ms-choice {
+	text-align:right;	
+}
+
+.ValideCg{
+	float:left; margin-left:25px;
+}
+.Question{
+		padding:60px 40PX 70PX; 
+		font-size:40px;
+}
+.btn {
+    padding: 19px 40px 19px 40px;
+    font-size: 28px;
+}
+.mapHead{
+	float:right;
+}
+.DivlistClt{
+	float:left;text-align:left;padding-left:10px;}

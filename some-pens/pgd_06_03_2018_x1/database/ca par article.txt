@@ -1,0 +1,28 @@
+SELECT  a.IdArticle,CB,a.Reference, a.Designation AS article,fa.Designation AS famille,col.colisagee Colisage,
+				
+		(
+			SELECT isnull(sum(df.qte),0) 
+			FROM factures f INNER JOIN detailFactures df ON f.IdFacture=df.idFacture
+			inner join colisages co on co.idArticle=df.idArticle		
+			WHERE EtatCmd=2 and  f.idVendeur=1030 and df.UniteVente='Colisage'
+			and df.idArticle=a.IdArticle
+		) AS qte_vendu,			
+		(
+			SELECT isnull(sum(df.qte),0) 
+			FROM factures f INNER JOIN detailFactures df ON f.IdFacture=df.idFacture 		
+			WHERE EtatCmd=2 and df.UniteVente='Pièce' 	and df.idArticle=a.IdArticle  and f.idVendeur=1030
+		) AS qte_venduPcs,		
+		(
+			select SUM(
+			df.ttc)
+			FROM factures f INNER JOIN detailFactures df ON f.IdFacture=df.idFacture 
+									
+			WHERE df.idArticle=a.IdArticle and EtatCmd=2   AND f.idVendeur=1030
+		) AS CA
+
+			FROM articles a
+			inner join colisages col on col.idArticle=a.idArticle
+			INNER JOIN gammes g ON g.IdGamme=a.IdFamille
+			INNER JOIN Sousfamilles s ON s.idSousFamille=g.IdSousFamille
+			INNER JOIN familles fa ON fa.idFamille=s.idFamille
+			WHERE  fa.idFamille=2025   

@@ -1,0 +1,18 @@
+
+DELETE FROM detailFactures WHERE idFacture=(
+	SELECT idFacture FROM factures f WHERE cast(f.date AS date)
+	< convert(date,'01/12/2017',105)  AND f.IdFacture=detailFactures.idFacture) 
+
+delete  FROM factures WHERE  cast(date AS date)
+	< convert(date,'01/12/2017',105)
+
+ delete  FROM factures WHERE  IdFacture =(
+ SELECT idFacture  FROM detailfactures df where  df.idArticle <=1111)
+
+ DELETE FROM familles WHERE idFamille<2025
+DELETE FROM Sousfamilles WHERE idFamille<2025
+DELETE FROM gammes WHERE idSousFamille< 1027
+
+
+DELETE FROM detailMouvements WHERE idArticle<=1111
+DELETE FROM mouvements WHERE idMouvement NOT in(SELECT idMouvement  FROM detailMouvements )

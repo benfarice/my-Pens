@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml><Article><nbr_piece_select>2</nbr_piece_select><nbr_colisage_select>4</nbr_colisage_select><marque>MAYOR DOMO</marque><RefArticle>5900</RefArticle><colisagee>6</colisagee><qteDispoEnBoite>4</qteDispoEnBoite><DsgArticle>adoucissant rose rubí 2000 ml mayordomo</DsgArticle><nbr_colisage>6</nbr_colisage></Article></xml>

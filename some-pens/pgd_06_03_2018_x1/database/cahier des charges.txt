@@ -1,0 +1,13 @@
+table facture
+
+etat 0: càd enregistrement du cmd
+etat 1: càd préparation de la cmd et le donner au livreur
+etat 2:càd paiement du facture
+
+
+
+table detailMouvements(stock)
+EtatSotie 0: càd enregistrement du sortie du stock  mais n'est pas encore vendu
+EtatSotie 1: càd enregistrement du sortie du stock  réelement vendu
+EtatSorti=3 càd un sortie d'un article qui est annulé 
+

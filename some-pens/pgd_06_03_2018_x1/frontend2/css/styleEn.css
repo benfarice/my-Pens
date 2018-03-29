@@ -1,0 +1,68 @@
+body {
+	font-family: Arial,sans-serif;
+	font-size:18px; 
+	margin:0 auto;
+	direction:ltr;
+}
+.page{
+	direction:ltr;
+}
+.heaLeft{ 
+	float:left;
+}
+.headRight{ 
+	float:right;
+}
+.signout{
+	float:right; 
+}
+.Info{
+	padding:19px 0px 19px 10px;
+}
+.divLeftArt {
+	float:left;
+}
+.divRight {
+	float:right;
+}
+.Right{
+		float:right;
+}
+.DetailGamme{
+	text-align:right;
+}
+.divLeft {
+	float:left;
+}
+input,textarea{
+padding-left:3px;
+}
+.ligne>.divArticle{	TEXT-align:left;}
+#popup_title {TEXT-align:left;}
+.divArticleWidth{
+	width:470px;
+}
+
+.ValideCg{
+	float:right; margin-right:25px;
+}
+/*
+.heaLeft{ 
+background:url(../../images/head_left.jpg) no-repeat;
+height:80px;
+width:587px;
+}
+.headRight{
+	background:url(../../images/head_right.jpg) no-repeat;
+	height:80px;
+	width:691px;
+}*/
+.Question{
+padding:60px 40PX 70PX; 
+font-size:30px;
+}
+.mapHead{
+	float:left;
+}
+.DivlistClt{
+	float:right;text-align:right;padding-right:10px;}

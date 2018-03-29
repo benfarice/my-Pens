@@ -1,0 +1,5 @@
+DELETE FROM Detail_inventaire_table_temp
+DELETE FROM inventaire_table_temp
+
+DELETE FROM Detail_inventaire_table
+DELETE FROM inventaire_table

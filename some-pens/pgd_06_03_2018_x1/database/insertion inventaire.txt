@@ -1,0 +1,9 @@
+
+insert into inventaire_table(Numero,Heure,Date_,Depot,Superviseur,Etat,DateValid)
+values('IN1800009','14:10:12','31/01/2017',3,1027,2,'14:10:12')
+
+insert into inventaire_table(Numero,Heure,Date_,Depot,Superviseur,Etat,DateValid)
+values('IN18000010','14:10:12','31/01/2017',4,1019,2,'14:10:12')
+
+insert into inventaire_table(Numero,Heure,Date_,Depot,Superviseur,Etat,DateValid)
+values('IN18000011','14:10:12','31/01/2017',2,1026,2,'14:10:12')

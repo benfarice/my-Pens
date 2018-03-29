@@ -1,0 +1,55 @@
+<?php 
+require_once('connexion.php');  
+include("lang.php");
+$date_j = date('Y-m-01');
+$second_date = date('Y-m-t');
+$input_depot = "";
+if(isset($_REQUEST['DateJ']) && $_REQUEST['DateJ'] != "" && isset($_REQUEST['second_date'])
+ && $_REQUEST['second_date'] != ""){
+	$date_j = str_replace("/","-", $_REQUEST['DateJ']);
+	$second_date = str_replace("/","-", $_REQUEST['second_date']);
+	//echo $date_j;
+	//echo $second_date;
+	$date_j = date("Y-m-d", strtotime($date_j));
+	$second_date = date("Y-m-d", strtotime($second_date));
+	$input_depot = $_REQUEST['input_depot'];
+	if($input_depot == "tous")
+		$input_depot = "";
+	else
+		$input_depot = " and v.idDepot = $input_depot ";
+}
+$query_frais_vendeur = "select v.idVendeur, sum(f.Montant) as totalfrais from frais f inner join vendeurs v
+on f.IdVendeur = v.idVendeur
+where f.DateOperation between '".$date_j."' and '".$second_date."' 
+$input_depot group by v.idVendeur";
+echo $query_frais_vendeur.'<hr>';
+$params_frais_vendeur  = array();
+$options_frais_vendeur =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+$stmt_frais_vendeur  =sqlsrv_query($conn,$query_frais_vendeur,$params_frais_vendeur,$options_frais_vendeur);
+$ntRes_frais_vendeur   = sqlsrv_num_rows($stmt_frais_vendeur);
+
+while($reader = sqlsrv_fetch_array($stmt_frais_vendeur, SQLSRV_FETCH_ASSOC)){	
+
+
+$query_get_vendeur_name = "select v.nom+' '+v.prenom as v_name from vendeurs v where
+ v.idVendeur = $reader[idVendeur]";
+echo $query_get_vendeur_name;
+$params__get_vendeur  = array();
+$options__get_vendeur =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+$stmt__get_vendeur  =sqlsrv_query($conn,$query_get_vendeur_name,$params__get_vendeur,$options__get_vendeur);
+$ntRes__get_vendeur   = sqlsrv_num_rows($stmt__get_vendeur);
+
+?> 
+      <div class="vendeur_frais">
+       	<?php
+      	while($reader_get_vendeur = sqlsrv_fetch_array($stmt__get_vendeur, SQLSRV_FETCH_ASSOC)){	
+      	?>
+      	<div class="vendeur_name"><?php $reader_get_vendeur['v_name']; ?></div>
+      	<?php 
+      	}
+      	 ?>
+      	<div  class="vendeur_total_frais"><?php echo $reader['totalfrais'] ?></div>
+      </div>
+<?php
+} 
+?>

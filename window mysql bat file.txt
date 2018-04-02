@@ -1,0 +1,4 @@
+@echo off
+echo Starting MySql Command Line
+C:\xampp\mysql\bin\mysql.exe --user=root --password=
+pause

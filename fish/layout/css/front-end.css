@@ -1,0 +1,354 @@
+/* Start All Pages and Tages */ 
+*,body,h1{
+	direction: rtl;
+    /*color: #2c3e50;*/
+	letter-spacing: -.05em;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	/*text-shadow: 0.5px 0.5px 0.5px #000000;*/
+}
+/* End All Pages and Tages*/
+/* Start Main Rulez */
+.inner-background{
+	background-color: #f4f4f4;
+}
+.outer-background{
+	background-color: #34495e;
+}
+
+/******************************************************************************
+								index.php
+*******************************************************************************/
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 15px;
+}
+/* End Main Rulez */
+
+/* Start Login Form */
+.login{
+	width: 600px;
+	margin: 10px auto;
+}
+.login h4{
+	color: #888;
+}
+.login input{
+	
+}
+.input-group > .form-control {
+	margin-bottom: 20px;
+}
+.login .form-control{
+	background-color: #eaeaea;
+}
+.login .btn{
+	background-color: #008dde;
+}
+#login_error{
+	display: none;
+	font-size: 27px;
+	letter-spacing: 1.3px;
+}
+/* End Login Form */
+
+/* Start bootstrap Edit */
+.navbar{
+	border-radius: 0;
+}
+
+.categories_buttons{
+	height: 150px;
+	width: 100%;
+	font-size: 40px;
+	letter-spacing: 0.1px;
+}
+
+#h2_initial_menu{
+	font-size: 40px;
+	line-height: 40px;
+	letter-spacing: 3px;
+	color: #2980b9;
+}
+/* End bootstrap Edit */
+/******************************************************************************
+								dashboard.php
+*******************************************************************************/
+.initial-menu{
+	height: 420px;
+	padding: 25px;
+	margin: 15px;
+}
+/******************************************************************************
+								Definition_fish.php
+*******************************************************************************/
+#search_vendeur{
+	/*height:80%;*/
+	padding: 25px;
+	margin: 15px;
+}
+#input_poids{
+	padding: 25px;
+	margin: 15px;
+	display: none;
+}
+#input_poids p,#input_poids span{
+	font-size: 50px;
+	color: #2980b9;
+}
+.search_bar{
+	/*background-color: #2980b9;*/
+	height: 50px;
+}
+.search_bar svg{
+	cursor: pointer;
+}
+.border-raduis-bar{
+	border-radius: 50px;
+}
+
+.vendeur_name_div,.family_name_div,.buyer_name_div{
+	height: 120px;
+	width: 190px;
+
+	background-color: /*#1abc9c*//*#2c3e50*/#487eb0;
+	color: #ecf0f1;
+	/*padding: 25px;*/
+	/*display: inline;*/
+	display: block;
+	border-radius: 50px;
+	float: left;
+	font-size: 30px;
+	margin: 7px;
+	padding-top: 25px;
+}
+.vendeur_name_div,.buyer_name_div{
+	height: 230px;
+	width: 190px;
+}
+#get_data_vendeurs{
+	/*margin-top: 50px;*/
+	height: 380px;
+
+
+}
+#get_data_espece,#get_data_buyer{
+	height: 400px;
+	overflow: hidden;
+}
+#get_data_buyer{
+	height: 250px;
+}
+#slider_vendeurs_names{
+	overflow: hidden;
+}
+#search_form{
+	/*padding: 15px;*/
+}
+.inner-background svg{
+	cursor: pointer;
+}
+#Espece_modal .modal-lg,
+#myModal_delect_confirm .modal-lg,
+#myModal_update_lot .modal-lg,
+#Buyers_modal .modal-lg,
+#Modal_buy_process .modal-lg
+{
+    max-width: 1500px;
+}
+#Espece_modal .modal-dialog,
+#myModal_delect_confirm .modal-dialog,
+#myModal_update_lot .modal-dialog,
+
+#Modal_buy_process .modal-dialog{
+   
+    width: 850px;
+}
+#Buyers_modal .modal-dialog{
+	width: 1100px;
+}
+#Espece_modal .modal-ku ,
+#myModal_delect_confirm .modal-ku,
+#myModal_update_lot .modal-ku,
+#Buyers_modal .modal-ku,
+#Modal_buy_process .modal-ku{
+  width: 850px;
+  margin: auto;
+}
+#Buyers_modal .modal-header p{
+	color: #d35400;
+	font-size: 35px;
+	font-weight: bold;
+}
+#Espece_modal .modal-body,#Espece_modal .modal-header{
+	padding: 5px;
+}
+#get_lot_info{
+	font-size: 25px;
+}
+.ui-dialog{
+	z-index: 1555;
+	direction: rtl;
+	width: 800px;
+	font-size: 30px;
+	left: 200px;
+	
+}
+.ui-dialog .ui-dialog-content{
+	color: #2c3e50;
+	background-color: white;
+}
+.ui-dialog .ui-widget-content 
+{ 
+	background-color: white; 
+}
+/*
+.method_buy{
+	border:solid 5px transparent;
+}
+#select_dialog_box{
+	border:solid 5px #d35400;
+}
+*/
+.cal_btns button{
+		height: 82px;
+		font-size: 40px;
+}	
+#dialog #input_piece{
+	font-size: 80px;
+}
+.ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: 1px solid #444444;
+    background:#f39c12 ;
+    font-weight: normal;
+    color: #34495e;
+    width: 200px;
+}
+.cal_btns .row{
+	margin-top: 15px;
+}
+#myModal_delect_confirm p{
+	font-size: 50px;
+}
+#myModal_delect_confirm #confirm_delete_message_lot{
+	color: #e74c3c;
+	letter-spacing: 2.5px;
+}
+#myModal_update_lot #update_title,
+#myModal_update_lot #lot_description,
+#myModal_update_lot #new_qte,
+#myModal_update_lot #qte_type,
+#myModal_update_lot #new_qte_label,
+#Modal_buy_process p,#Modal_buy_process span{
+	color: #2c3e50;
+	letter-spacing: 0.5px;
+	font-size: 30px;
+}
+#Modal_buy_process button{
+	font-size: 30px;
+}
+#Modal_buy_process .modal-body button{
+	margin: 5px;
+}
+#Modal_buy_process p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+#myModal_update_lot #new_qte,#myModal_update_lot #qte_type{
+	font-size: 50px;
+}
+#myModal_update_lot #lot_description{
+	font-size: 40px;
+}
+#seller_selected .none,#seller_selected_d .none{
+	display: none;
+}
+#seller_selected p,#seller_selected_d p{
+	display: inline;
+}
+.ui-dialog .ui-dialog-buttonpane {
+    margin-top: .1em;
+    padding: .1em 0.5em .1em .2em;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+    margin: .2em .1em .2em 0;
+}
+#Modal_buy_process p.font-bigger,#Modal_buy_process p.font-bigger span{
+	font-size: 36px;
+}
+
+/******************* amina css ***************/
+.create_facture_btn {
+    font-size: 32px;
+}
+.chpinvisible{
+	display:none;
+}
+#popup_title{
+	text-align:right;
+	padding-right:5px;
+	font-size:28px;line-height: 2em;
+}
+#popup_ok, #popup_cancel{
+	padding:0.6em;
+	font-size:28px;
+}
+.has-error {
+			color:red;	
+		}
+.small, small{
+	FONT-size:18px;	
+}
+.clear{
+	clear:both;
+}
+.form-control {
+	    line-height: 2;
+}
+.formRech{
+	margin:auto;
+	border:1px solid #CCC;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	padding:5px; 
+	margin:5px auto;
+	background:#fff;
+}
+.vendeur_name_div{
+	background-color: #487eb0;
+}
+.family_name_div{
+	background-color: #F9D29E;COLOR:#333;
+}
+.spece_name_div{
+	background-color: #EBD84F;COLOR:#333;
+}
+.buyer_name_div{
+	background-color: #B9F8C6;COLOR:#333;
+}
+.SellerName{
+	font-size:30px;
+	padding-top:10px 0;
+}
+.menu_btn .btn{
+	white-space:normal !important;
+}
+.radio_class .pretty{
+	width: 340px;
+}
+.radio_class .pretty label{
+	font-size: 35px;
+	color: #d35400;
+	font-weight: bold;
+	letter-spacing: 1.1px;
+}
+#search_options{
+	margin-bottom: 12px;
+	margin-top: 12px;
+}
+ #Modal_buy_process p.font-bigger ,#Modal_buy_process p.font-bigger span{
+    font-size: 36px;
+	font-weight:bold;
+	color:#d35400;
+}

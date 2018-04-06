@@ -1,5 +1,9 @@
 <?php 
 include 'includes/database.php';
+//Create the select query
+$query = "SELECT * FROM customer";
+//Get results
+$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +28,7 @@ include 'includes/database.php';
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><a href="index.php">Home</a></li>
-            <li role="presentation"><a href="http://imzoughene.bitballoon.com/">Imzoughene Youssef</a></li>
+            <li role="presentation"><a target="_blank" href="http://imzoughene.bitballoon.com/">Imzoughene Youssef</a></li>
             <li role="presentation"><a href="add_customer.php">Add Customer</a></li>
           </ul>
         </nav>
@@ -46,24 +50,36 @@ include 'includes/database.php';
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr>
-		      <th scope="row">1</th>
-		      <td>Mark</td>
-		      <td>Otto</td>
-		      <td><a href="edit_customer.php?id=1" class="btn btn-default">Edit</a></td>
-		    </tr>
-		    <tr>
-		      <th scope="row">2</th>
-		      <td>Jacob</td>
-		      <td>Thornton</td>
-		      <td>@fat</td>
-		    </tr>
-		    <tr>
-		      <th scope="row">3</th>
-		      <td>Larry</td>
-		      <td>the Bird</td>
-		      <td>@twitter</td>
-		    </tr>
+		  	<?php 
+		  	//Check if at least one row is found
+		  	if($result->num_rows > 0){
+		  		// Loop through results
+		  		while($row = $result->fetch_assoc()){
+		  			//Display customer info
+		  			?>
+		  			    <tr>
+					      <th scope="row">
+					      	<?php echo $row['name'] ?>
+					      		
+					      </th>
+					      <td>
+					      	<?php echo $row['email'] ?>
+					      		
+					      </td>
+					      <td>
+					      	<?php echo $row['address'] ?>
+					      </td>
+					      <td><a href="edit_customer.php?id=<?php echo $row['id'] ?>" class="btn btn-default">Edit</a></td>
+					    </tr>
+		  			<?php
+		  		}
+		  	}else{
+		  		echo "Sorry ,no customers were found";
+		  	}
+		  	?>
+		   
+		    
+		   
 		  </tbody>
 		</table>
         </div>

@@ -1,7 +1,7 @@
 <?php 
 include 'includes/database.php';
 //Create the select query
-$query = "SELECT * FROM customer";
+$query = "SELECT * FROM customer order by id desc";
 //Get results
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
  ?>
@@ -39,6 +39,17 @@ $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
       <div class="row marketing">
         <div class="col-lg-6">
+         
+         <?php
+         if(isset($_GET['msg'])){
+         	?>
+         	<div class="alert alert-success" role="alert">
+         	<?php echo $_GET['msg']; ?>
+         	 </div>
+         	<?php
+         }
+         ?>
+        
          <h2>Customers</h2>
          <table class="table table-striped">
 		  <thead>

@@ -33,6 +33,7 @@ $user = new User;
 
 $user->login('youssef','5632');
 */
+/* ------------------------------------------------------------------
 class User{
 	public $id;
 	public $username;
@@ -64,3 +65,48 @@ $user = new User('youssef','5632');
 //$user->register();
 
 $user->login();
+------------------------------------------------------------------ 
+class Post{
+	private $name;
+	public function __set($name,$value){
+		echo "Setting ".$name." to <strong>".$value."</strong><br />";
+		$this->name = $value;
+	}
+	public function __get($name){
+		echo "Getting ".$name."  <strong>".$this->name."</strong><br />";
+		
+	}
+	public function __isset($name){
+		echo 'Is '.$name.' set?<br />';
+		return isset($this->name);
+	}
+}
+
+$post = new Post;
+$post->name = "Testing pgd";
+echo $post->name;
+var_dump(isset($post->name));
+------------------------------------------------------------------ */
+class First{
+	public $id = 23;
+	//public $name = 'John Doe';
+	//private $name = 'John Doe';
+	protected $name = 'John Doe';
+
+	/*public function saySomething(){
+		echo 'Something';
+	}*/
+	public function saySomething($word){
+		echo $word;
+	}
+}
+class Second extends First{
+	public function getName(){
+		echo $this->name;
+	}
+}
+$second = new Second;
+//echo $second->name;
+echo $second->getName();
+//echo $second->saySomething();
+//echo $second->saySomething('imzoughene youssef');

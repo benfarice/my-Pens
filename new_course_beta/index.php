@@ -86,16 +86,16 @@ $post = new Post;
 $post->name = "Testing pgd";
 echo $post->name;
 var_dump(isset($post->name));
------------------------------------------------------------------- */
+------------------------------------------------------------------ 
 class First{
 	public $id = 23;
 	//public $name = 'John Doe';
 	//private $name = 'John Doe';
 	protected $name = 'John Doe';
 
-	/*public function saySomething(){
+	public function saySomething(){
 		echo 'Something';
-	}*/
+	}
 	public function saySomething($word){
 		echo $word;
 	}
@@ -110,3 +110,111 @@ $second = new Second;
 echo $second->getName();
 //echo $second->saySomething();
 //echo $second->saySomething('imzoughene youssef');
+------------------------------------------------------------------ 
+class User{
+	public $username;
+	public static $minPassLength = 5 ;
+	public static function validatePassword($password){
+		if(strlen($password) >= self::$minPassLength){
+			return true;
+		}else{
+			return false;
+		}
+
+	}
+}
+
+$password = 'monkey';
+
+if(User::validatePassword($password)){
+	echo "password is valid";
+}else{
+	echo "password is NOT valid";
+}
+echo "<hr>";
+echo User::$minPassLength;
+------------------------------------------------------------------ 
+abstract class Animal{
+	public $name;
+	public $color;
+	public function describe(){
+		return $this->name.' is '.$this->color;
+
+	}
+	abstract public function makeSound();
+}
+
+class Duck extends Animal{
+	public function describe(){
+		return parent::describe();
+	}
+	public function makeSound(){
+		return 'Quack';
+	}
+}
+
+class Dog extends Animal{
+	public function describe(){
+		return parent::describe();
+	}
+	public function makeSound(){
+		return 'Bark';
+	}
+}
+
+$animal = new Duck();
+$animal->name='Ben';
+$animal->color='Yellow';
+echo $animal->describe();
+echo "<hr>";
+$animal = new Duck();
+$animal->name='William';
+$animal->color='red';
+echo $animal->describe();
+echo "<br />";
+echo $animal->makeSound();
+------------------------------------------------------------------ 
+//include 'foo.php';
+//include 'bar.php';
+spl_autoload_register(function($class_name){
+	include $class_name.'.php';
+});
+
+$foo = new Foo;
+$bar = new Bar;
+
+$foo->sayHello();
+echo '<hr>';
+$bar->sayHello();
+------------------------------------------------------------------ 
+class People{
+	public $person1 = 'Mike';
+	public $person2 = 'Shelly';
+	public $person3 = 'Jeff';
+
+	protected $person4 = 'john';
+	private $person5 = 'Jen';
+
+	function iterateObject(){
+		foreach ($this as $key => $value) {
+			print "$key => $value \n";
+		}
+	}
+}
+$p = new People;
+$p->iterateObject();
+------------------------------------------------------------------ */
+class People{
+	public $person1 = 'Mike';
+	public $person2 = 'Shelly';
+	public $person3 = 'Jeff';
+
+	protected $person4 = 'john';
+	private $person5 = 'Jen';
+
+
+}
+$p = new People;
+foreach ($p as $key => $value) {
+	print "$key => $value \n";
+}

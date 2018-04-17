@@ -1,0 +1,58 @@
+#search_menu{
+	border-radius: 5px;
+    padding: 5px;
+    margin: 5px auto;
+    border: 1px solid #CCC;
+}
+#table_especes td{
+	font-size: 21px;
+}
+/*
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: 480px;
+    padding: 30px;
+}
+div.dataTables_wrapper div.dataTables_length select {
+    width: 400px;
+    display: inline-block;
+    padding: 30px;
+}
+*/
+.dataTable > thead > tr > th[class*="sort"]:after{
+    content: "" !important;
+}
+.dataTable > thead > tr > th[class*="sort"]:before{
+    content: "" !important;
+}
+/*
+div.dataTables_wrapper div.dataTables_filter label {
+   
+    font-size: 25px;
+}
+div.dataTables_wrapper div.dataTables_length label {
+   
+    font-size: 25px;
+}
+*/
+#myModal_delete_espece,#myModal_update_espece{
+    font-size: 35px;
+    color: #e74c3c;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+#myModal_delete_espece .btn,
+#myModal_update_espece  .btn,
+#myModal_add_espece .btn{
+    font-size: 30px;
+}
+#myModal_update_espece{
+    color:#2c3e50;
+}
+#myModal_update_espece select,
+#myModal_add_espece select,
+#myModal_add_espece textarea,
+#myModal_update_espece textarea{
+    font-size: 20px;
+}

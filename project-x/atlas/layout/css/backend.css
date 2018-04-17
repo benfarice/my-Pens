@@ -1,0 +1,104 @@
+/* Start All Pages and Tages */
+*,body,h1{
+	direction: rtl;
+    color: #2c3e50;
+	letter-spacing: -.05em;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	/*text-shadow: 0.5px 0.5px 0.5px #000000;*/
+}
+/* End All Pages and Tages*/
+/* Start Main Rulez */
+.inner-background{
+	background-color: #f4f4f4;
+}
+.outer-background{
+	background-color: #34495e;
+}
+
+/******************************************************************************
+								index.php
+*******************************************************************************/
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 15px;
+}
+/* End Main Rulez */
+
+/* Start Login Form */
+.login{
+	width: 600px;
+	margin: 10px auto;
+}
+.login h4{
+	color: #888;
+}
+.login input{
+	
+}
+.input-group > .form-control {
+	margin-bottom: 20px;
+}
+.login .form-control{
+	background-color: #eaeaea;
+}
+.login .btn{
+	background-color: #008dde;
+}
+/* End Login Form */
+
+/* Start bootstrap Edit */
+.navbar{
+	border-radius: 0;
+}
+
+
+/* End bootstrap Edit */
+/******************************************************************************
+								dashboard.php
+*******************************************************************************/
+.initial-menu{
+	height: 420px;
+	padding: 25px;
+	margin: 15px;
+}
+/******************************************************************************
+								Definition_fish.php
+*******************************************************************************/
+.search_vendeur{
+	height: 420px;
+	padding: 25px;
+	margin: 15px;
+}
+.search_bar{
+	background-color: #2980b9;
+	height: 50px;
+}
+.search_bar svg{
+	cursor: pointer;
+}
+.border-raduis-bar{
+	border-radius: 50px;
+}
+
+.vendeur_name_div,.family_name_div{
+	height: 110px;
+	background-color: #1abc9c;
+	color: #ecf0f1;
+	padding: 25px;
+	display: inline;
+	
+	border-radius: 50px;
+}
+#get_data_vendeurs{
+	margin-top: 50px;
+	height: 80px;
+
+
+}
+#slider_vendeurs_names{
+	overflow: hidden;
+}
+#search_form{
+	/*padding: 15px;*/
+}

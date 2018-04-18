@@ -1,9 +1,11 @@
 <div>
+	<?php if(isset($_SESSION['is_logged_in'])) : ?>
 	<a 
 	class="btn btn-success btn-share"
 	href="<?php echo ROOT_URL; ?>/shares/add">
 		Share Something
 	</a>
+<?php endif; ?>
 	<?php foreach($viewmodel as $item) : ?>
 		<div class="jumbotron">
 			<h3><?php echo $item['title']; ?></h3>

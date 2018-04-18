@@ -2,7 +2,7 @@
 class ShareModel extends Model{
 	public function Index(){
 		//return;
-		$this->query('select * from shares');
+		$this->query('select * from shares order by create_date desc');
 		$rows = $this->resultSet();
 		//print_r($rows);
 		return $rows;
@@ -16,9 +16,9 @@ class ShareModel extends Model{
 			//echo "Submitted";
 			//Insert INTO Mysql
 			$this->query('insert into shares (title,body,link,user_id) values(:title,:body,:link,:user_id)');
-			$this->bind(':title',$post['title']);
-			$this->bind(':body',$post['body']);
-			$this->bind(':link',$post['link']);
+			$this->bind(':title',$post['Title']);
+			$this->bind(':body',$post['Body']);
+			$this->bind(':link',$post['Link']);
 			$this->bind(':user_id',1);
 
 			$this->execute();

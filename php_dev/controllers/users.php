@@ -1,8 +1,8 @@
 <?php 
 class Users extends Controller{
-	protected function Index(){
+	/*protected function Index(){
 		echo 'Users/index';
-	}
+	}*/
 }
 
  ?>

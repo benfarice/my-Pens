@@ -1,0 +1,70 @@
+INSERT INTO tarifs
+(     idArticle,    pvHT,    qteMin,    qteMax,    controleQte,    type,    idDepot,    idFiche
+)
+VALUES(        3311 , 25.5, -- pvHT - decimal
+    0, -- qteMin - int
+    0, -- qteMax - int
+    0, -- controleQte - bit
+    N'', -- type - nvarchar
+    1, -- idDepot - int
+    3036 -- idFiche - int grossite
+)
+INSERT INTO tarifs
+(     idArticle,    pvHT,    qteMin,    qteMax,    controleQte,    type,    idDepot,    idFiche
+)
+VALUES(        3311, 27, -- pvHT - decimal
+    0, -- qteMin - int
+    0, -- qteMax - int
+    0, -- controleQte - bit
+    N'', -- type - nvarchar
+   1, -- idDepot - int
+    3037 -- idFiche - int detaillant
+)
+
+INSERT INTO tarifs
+(     idArticle,    pvHT,    qteMin,    qteMax,    controleQte,    type,    idDepot,    idFiche
+)
+VALUES(        3312 , 25, -- pvHT - decimal
+    0, -- qteMin - int
+    0, -- qteMax - int
+    0, -- controleQte - bit
+    N'', -- type - nvarchar
+    1, -- idDepot - int
+    3036 -- idFiche - int grossite
+)
+INSERT INTO tarifs
+(     idArticle,    pvHT,    qteMin,    qteMax,    controleQte,    type,    idDepot,    idFiche
+)
+VALUES(        3312, 26.5, -- pvHT - decimal
+    0, -- qteMin - int
+    0, -- qteMax - int
+    0, -- controleQte - bit
+    N'', -- type - nvarchar
+   1, -- idDepot - int
+    3037 -- idFiche - int detaillant
+)
+
+
+
+INSERT INTO tarifs
+(     idArticle,    pvHT,    qteMin,    qteMax,    controleQte,    type,    idDepot,    idFiche
+)
+VALUES(        3313 , 17.5, -- pvHT - decimal
+    0, -- qteMin - int
+    0, -- qteMax - int
+    0, -- controleQte - bit
+    N'', -- type - nvarchar
+    1, -- idDepot - int
+    3036 -- idFiche - int grossite
+)
+INSERT INTO tarifs
+(     idArticle,    pvHT,    qteMin,    qteMax,    controleQte,    type,    idDepot,    idFiche
+)
+VALUES(        3313, 18, -- pvHT - decimal
+    0, -- qteMin - int
+    0, -- qteMax - int
+    0, -- controleQte - bit
+    N'', -- type - nvarchar
+   1, -- idDepot - int
+    3037 -- idFiche - int detaillant
+)

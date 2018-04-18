@@ -1,0 +1,27 @@
+body{	margin:0px; direction:rtl;font-size:18px;}
+.clear{	clear:both;}
+#page div{	
+
+ }
+#boxLogo{
+	float:right;
+}
+#boxClient{
+	float:left;
+}
+
+#boxContenu td.montant{
+text-align:right;
+
+}
+.headerTab#total{
+	text-align:right;
+}
+.infoSte{float:right;}
+.infoClt{float:left;}
+.Fermer{
+	float:left;
+}
+.nbr{
+	unicode-bidi: bidi-override;direction: ltr;
+}

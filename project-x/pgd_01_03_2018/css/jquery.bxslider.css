@@ -1,0 +1,518 @@
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto 60px;
+	padding: 0;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+	/*-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+	border:  5px solid #fff;
+	left: -5px;*/
+	background: #fff;
+	
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(images/bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+	left: 0px;
+	background: url(../images/previ.png) no-repeat ;
+}
+
+.bx-wrapper .bx-next {
+	right: 0px;
+	background: transparent url(../images/nextt.png) no-repeat;
+}
+
+.bx-wrapper .bx-prev:hover {
+	/*background-position: 0 0;*/
+}
+
+.bx-wrapper .bx-next:hover {
+	/*background-position: -43px 0;**/
+}
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	outline: 0;
+	width: 100px;
+	height: 100px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+body {
+	font-family: Arial,sans-serif;
+	font-size:18px; 
+	margin:0 auto;
+
+}
+.page{
+	width:1278px;
+
+    margin:0 auto;height: 734px;padding:0;
+
+	}
+.divLeft {
+	float:left;width:640px;background:#e8edff;
+}
+.divLeftArt {
+	float:left;width:620px;background:#e8edff;
+}
+.divRight {
+	float:right;width:638px;
+}
+  .table td{ background:#fff;
+}
+
+.tableTarif th{background:#b9c9fe;color:#003399;padding:3px 10px;}
+.tableTarif td{border:1px solid #ebebeb;}
+.tableTarif tr{border:1px solid #ebebeb;background:#fff;}
+.tableTarif  tr.hover:hover {    background-color: #B0F693;cursor:pointer;}
+.entete{
+	color:#003399;
+	TEXT-align:center;overflow: auto;display: flex;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.ligne{
+	overflow: auto; display: flex;
+	margin:6px 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.ligne>.divArticle:hover {    background-color: #B0F693;cursor:pointer;}
+.divArticle{width:390px;padding:19px 10px;float:left;	TEXT-align:left;border:2px solid #e7e9ee;
+-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;background:#2477ca;
+	border-radius: 5px;TEXT-align:center;
+}
+.divPV{width:80px;float:right;	TEXT-align:center;border:2px solid  #e7e9ee;-moz-border-radius: 5px;background:#2477ca;
+	-webkit-border-radius: 5px;
+	padding: 19px 10px;
+	border-radius: 5px;}
+.divPV{width:80px;}
+.entete>.divPV,.entete>.divArticle{COLOR:#fff;
+}
+.btnCmdArt{
+	/*padding:13px 10px ;*/
+	padding:23px 10px ;
+	font-size:24px;
+	color:#fff;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a4ba8+0,2989d8+50,207cca+51,1a4ba8+100 */
+background: #1a4ba8; /* Old browsers */
+background: -moz-linear-gradient(top,  #1a4ba8 0%, #2989d8 50%, #207cca 51%, #1a4ba8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #1a4ba8 0%,#2989d8 50%,#207cca 51%,#1a4ba8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #1a4ba8 0%,#2989d8 50%,#207cca 51%,#1a4ba8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a4ba8', endColorstr='#1a4ba8',GradientType=0 ); /* IE6-9 */
+cursor:pointer;
+	border:none;
+	-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+/*MARGIN:4px 0 0 2px;*/
+}
+.divCmd>.btn{
+	padding:10px 30px ;font-size:24px;
+	color:#fff;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a4ba8+0,2989d8+50,207cca+51,1a4ba8+100 */
+	background: #1a4ba8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #1a4ba8 0%, #2989d8 50%, #207cca 51%, #1a4ba8 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #1a4ba8 0%,#2989d8 50%,#207cca 51%,#1a4ba8 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #1a4ba8 0%,#2989d8 50%,#207cca 51%,#1a4ba8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a4ba8', endColorstr='#1a4ba8',GradientType=0 ); /* IE6-9 */
+	cursor:pointer;
+	border:none;	
+}
+.ligne>.divArticle{	TEXT-align:left;BACKGROUND:#fff;}
+.ligne>.divPV{	TEXT-align:right;padding-right:5px;BACKGROUND:#fff;}
+.clear{clear:both;}
+.cmd{color:#fff;text-align:center;background:#1a4ba8;font-size:36px;border-right:1px solid #1e56c2;}
+.inputTable{padding:10px 3px;	font-size:18px;text-align:right;border:1px solid #ebebeb; }
+.tableCmd td{border:1px solid #ccc;}
+.haut{ }
+.qtyplus{
+		font-size:3em;margin-top:4px;
+		cursor:pointer;
+		width:110px;
+		color:#fff;border:none;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a4ba8+0,2989d8+50,207cca+51,1a4ba8+100 */
+		background: #1a4ba8; /* Old browsers */
+		background: -moz-linear-gradient(top,  #1a4ba8 0%, #2989d8 50%, #207cca 51%, #1a4ba8 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #1a4ba8 0%,#2989d8 50%,#207cca 51%,#1a4ba8 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #1a4ba8 0%,#2989d8 50%,#207cca 51%,#1a4ba8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a4ba8', endColorstr='#1a4ba8',GradientType=0 ); /* IE6-9 */
+}/*background:  url(../images/Add48.png);*/
+
+label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+
+}
+td.global{background:#1a4ba8;color:#fff;}
+input.global{background:none;bordeR:none;color:#fff; font-size:36px;padding:15px 0px ;text-align:right;}
+input.global2{bordeR:1px solid #ccc; font-size:36px;padding:15px 0px ;text-align:right;}
+.Close{background:url(../images/close80.png) no-repeat;bordeR:none;color:#fff; font-size:36px;display:none;
+width:80px;float:left;
+padding:15px 0px ;text-align:right;}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height: 800px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 100%;
+
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+background:url(../images/close-64.png);
+height:64px; width:64px;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+.btnCmd{padding:15px 0;
+	color:#fff;
+	background:#1a4ba8;
+	
+	cursor:pointer;
+	font-size:36px;width:100%;
+	border:none;
+}
+
+.Qte{
+font-size:2.9em;
+border:1px solid #ccc;
+}
+.btn{
+	padding:15px 30px ;font-size:24px;
+	color:#fff;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a4ba8+0,2989d8+50,207cca+51,1a4ba8+100 */
+background: #1a4ba8; /* Old browsers */
+background: -moz-linear-gradient(top,  #1a4ba8 0%, #2989d8 50%, #207cca 51%, #1a4ba8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #1a4ba8 0%,#2989d8 50%,#207cca 51%,#1a4ba8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #1a4ba8 0%,#2989d8 50%,#207cca 51%,#1a4ba8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a4ba8', endColorstr='#1a4ba8',GradientType=0 ); /* IE6-9 */
+cursor:pointer;
+	border:none;
+}
+
+.qtyplus:hover,.btn:hover,.btnCmdArt:hover,.btnCmd:hover,#popup_cancel:hover,#popup_ok:hover{
+	background:#252525;
+}
+input.error,textarea.error ,  input.error,textarea.error {
+	border:1px solid  #990000;
+	background-color:#FFECFF;
+}
+
+.divArticleL{
+	width:423px;padding:12px 10px;float:left;	TEXT-align:left;border-right:1px solid #ccc;
+}
+.divPVL{
+		width:120px;padding:12px 10px;float:left;	TEXT-align:right;border-right:1px solid #ccc;
+}
+.divColisageL{
+		width:90px;padding:12px 10px;float:left;	TEXT-align:right;border-right:1px solid #ccc;
+}
+
+.divTTC{
+		width:190px;padding:12px 10px;float:left;	TEXT-align:right;border-right:1px solid #ccc;
+}
+
+ .divQteL{
+		width:120px;padding:12px 10px;float:left;	TEXT-align:right;border-right:1px solid #ccc;
+}
+.title{width:100;font-size:30px; text-align:center;}
+.pair{
+background: #F2F2F2; /* Old browsers */
+/*
+border:1px solid #ccc;
+*/
+	overflow: auto; display: flex;border-top:0;
+}
+.impair
+{
+background: #ffffff; /* Old browsers */
+overflow: auto; display: flex;border-top:0;
+}
+
+.ListeCmd{
+	border: 1px solid #CCC;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+border-radius: 5px;
+
+}
+.enteteL>div{
+	color:#fff;
+}
+.ListeCmd .enteteL{
+	color:#fff;
+	background: #1a4ba8; /* Old browsers */
+color:#003399;
+	TEXT-align:center;overflow: auto;display: flex;
+}
+.Retour{text-align:center;
+font-size:26px;
+}
+#formAddArt{
+	font-size:24px;
+}
+select{
+
+  border: 1px solid #ccc;
+
+  border-radius: 0px;
+  font-size: 31px;
+
+}
+select option
+{
+}
+
+.TotalReg{
+	padding:18px 6px;width: 200px;
+	background:#6EBFF6;
+	border: 1px solid #CCC;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+border-radius: 5px;
+}
+.bq{
+
+	background:#dbedf9;
+	border:1px solid #1a4ba8;
+	padding:10px;
+	display:none;
+}
+.bq td{	background:none;}
+input{bordeR:1px solid #ccc; font-size:26px;padding:15px 0px ;}
+.Cmder{
+background:red;
+}

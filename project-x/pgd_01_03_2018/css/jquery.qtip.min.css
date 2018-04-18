@@ -1,0 +1,62 @@
+.qtip{position:absolute;left:-28000px;top:-28000px;
+display:none;max-width:280px;min-width:50px;font-size:20.5px;
+line-height:12px;direction:ltr;box-shadow:none;padding:0}
+.qtip-content,.qtip-titlebar{position:relative;overflow:hidden}
+.qtip-content{padding:15px 10px;text-align:left;word-wrap:break-word}
+.qtip-titlebar{padding:5px 35px 5px 10px;border-width:0 0 1px;font-weight:700}
+.qtip-titlebar+.qtip-content{border-top-width:0!important}
+.qtip-close{position:absolute;right:-9px;top:-9px;z-index:11;cursor:pointer;outline:0;border:1px solid transparent}
+.qtip-titlebar .qtip-close{right:4px;top:50%;margin-top:-9px}* html 
+.qtip-titlebar .qtip-close{top:16px}
+.qtip-icon .ui-icon,.qtip-titlebar 
+.ui-icon{display:block;text-indent:-1000em;direction:ltr}.
+qtip-icon,.qtip-icon .ui-icon{-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;text-decoration:none}
+.qtip-icon .ui-icon{width:18px;height:14px;line-height:14px;text-align:center;text-indent:0;
+font:normal 700 10px/13px Tahoma,sans-serif;color:inherit;background:-100em -100em no-repeat}
+.qtip-default{border:1px solid #b9c9fe;background-color:#FFFFA3;color:#555}
+qtip-default .qtip-titlebar{background-color:#FFEF93}
+.qtip-default .qtip-icon{border-color:#CCC;background:#F1F1F1;color:#777}
+qtip-default .qtip-titlebar .qtip-close{border-color:#AAA;color:#111}
+
+
+/*! Add shadows to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE6+, Safari 2+ */
+.ui-tooltip-shadow{
+	-webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+	.ui-tooltip-shadow .ui-tooltip-titlebar,
+	.ui-tooltip-shadow .ui-tooltip-content{
+		filter: progid:DXImageTransform.Microsoft.Shadow(Color='gray', Direction=135, Strength=3);
+		-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Color='gray', Direction=135, Strength=3)";
+	}
+	
+	
+/*! Add rounded corners to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE9+, Safari 2+ */
+.ui-tooltip-rounded,
+.ui-tooltip-rounded .ui-tooltip-content,
+.ui-tooltip-tipsy,
+.ui-tooltip-tipsy .ui-tooltip-content,
+.ui-tooltip-youtube,
+.ui-tooltip-youtube .ui-tooltip-content{
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.ui-tooltip-rounded .ui-tooltip-titlebar,
+.ui-tooltip-tipsy .ui-tooltip-titlebar,
+.ui-tooltip-youtube .ui-tooltip-titlebar{
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+
+.ui-tooltip-rounded .ui-tooltip-titlebar + .ui-tooltip-content,
+.ui-tooltip-tipsy .ui-tooltip-titlebar + .ui-tooltip-content,
+.ui-tooltip-youtube .ui-tooltip-titlebar + .ui-tooltip-content{
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}

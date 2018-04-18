@@ -1,0 +1,6 @@
+DELETE FROM detailFactures WHERE idFacture=(
+SELECT idFacture FROM factures f WHERE cast(f.date AS date)
+ < convert(date,'01/12/2017',105)  AND f.IdFacture=detailFactures.idFacture) 
+
+ delete  FROM factures WHERE cast(date AS date)
+ < convert(date,'01/12/2017',105)  

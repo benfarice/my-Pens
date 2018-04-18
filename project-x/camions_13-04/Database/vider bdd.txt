@@ -1,0 +1,10 @@
+
+delete from voyages
+go
+delete from carburant
+go
+delete from activite
+go
+update camions set etat = 1
+go
+update chauffeurs set etat = 1

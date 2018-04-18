@@ -1,0 +1,19 @@
+ /*** Dépot Sale ***/
+ DELETE FROM mouvements WHERE idDepot=3 AND type LIKE 'Entree'
+ DELETE FROM detailMouvements WHERE idDepot=3 AND idMouvement NOT IN
+		(SELECT idMouvement FROM mouvements )
+
+  DELETE FROM mouvements WHERE idDepot=3 AND type LIKE 'Sortie'
+ DELETE FROM detailMouvements WHERE idDepot=3 AND idMouvement NOT IN
+		(SELECT idMouvement FROM mouvements )
+
+
+ /*** Dépot Tetouane 2 ***/
+ DELETE FROM mouvements WHERE idDepot=2 AND type LIKE 'Entree'
+ DELETE FROM detailMouvements WHERE idDepot=2 AND idMouvement NOT IN
+		(SELECT idMouvement FROM mouvements )
+
+
+  DELETE FROM mouvements WHERE idDepot=2 AND type LIKE 'Sortie'
+ DELETE FROM detailMouvements WHERE idDepot=2 AND idMouvement NOT IN
+		(SELECT idMouvement FROM mouvements )

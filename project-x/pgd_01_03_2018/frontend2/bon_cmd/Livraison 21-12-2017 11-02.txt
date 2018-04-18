@@ -1,0 +1,17 @@
+VENDEUR : عباس خالد
+DATE ET HEURE : 21/12/2017 11:02
+NF1700287
+
+CLIENT : CL1700001 - ELECTRO
+VILLE : CASABLANCA
+
+
+Test20
+Code : test20
+   3  :    1.00            3.00 DH
+
+
+Total Facture              3.00  DH  
+Nbr référence                 1
+Pcs :                         3
+----------------------------------------

@@ -1,0 +1,5 @@
+
+DELETE FROM factures WHERE IdFacture=7845
+DELETE FROM detailFactures  WHERE IdFacture=7845
+DELETE FROM mouvements WHERE IdFacture=7845
+DELETE FROM detailMouvements WHERE IdFacture=7845

@@ -1,0 +1,16 @@
+VENDEUR : عباس خالد
+DATE ET HEURE : 17/11/2017 17:42
+NF1700239
+
+CLIENT : CL1700001 - ELECTRO
+VILLE : CASABLANCA
+
+
+
+Total Facture               0.00  DH  
+Nbr référence            0
+----------------------------------------
+Espèce :       315.00 DH
+Chèque :         0.00 DH
+Crédit :         0.00 DH
+

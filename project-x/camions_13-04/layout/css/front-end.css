@@ -1,0 +1,273 @@
+body{
+	background-color: #34495e;
+}
+*, body, h1 {
+    /*direction: rtl;*/
+    direction: ltr;
+    color: #2c3e50;
+    letter-spacing: -.05em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    /*text-shadow: 0.5px 0.5px 0.5px #000000;*/
+}
+
+.inner-background{
+	background-color: /*#ff7675*/#ecf0f1;
+}
+.outer-background {
+    background-color: #34495e;
+}
+/* End bootstrap Edit */
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 15px;
+}
+/* End Main Rulez */
+
+/* Start Login Form */
+.login{
+	width: 600px;
+	margin: 10px auto;
+}
+.login h4{
+	color: #888;
+}
+.login input{
+
+}
+.input-group > .form-control {
+	margin-bottom: 20px;
+}
+.login .form-control{
+	background-color: #eaeaea;
+}
+.login .btn{
+	background-color: #008dde;
+}
+#login_error{
+	display: none;
+	font-size: 27px;
+	letter-spacing: 1.3px;
+}
+/* End Login Form */
+.menu_demarrage .btn{
+	margin-bottom: 20px;
+	font-size: 20px;
+	white-space:normal !important;
+	/*letter-spacing: 1.2px;*/
+}
+/*-------------Dashboard----------*/
+#menu_dashboard,.btn-menu{
+	color: #ecf0f1;
+	font-size: 40px;
+	line-height: 40px;
+	letter-spacing: 3px;
+}
+#menu_dashboard{
+	color: #2c3e50;
+}
+.search_bar{
+
+	height: 50px;
+}
+.search_bar svg{
+	cursor: pointer;
+}
+.border-raduis-bar{
+	border-radius: 50px;
+}
+
+.vehicule,.driver{
+	height: 200px;
+	width: 210px;
+
+	display: block;
+	border-radius: 50px;
+	float: left;
+	font-size: 30px;
+	margin: 7px;
+	padding-top: 25px;
+}
+.driver{
+	height: 150px;
+}
+.enabled{
+	background-color:#2980b9;
+	color: #ecf0f1;
+}
+.not_enabled{
+	background-color:#95a5a6;
+
+}
+.ville{
+	background-color:#f1c40f;
+	color: #2c3e50;
+}
+.site_chargement{
+	background-color:#16a085;
+	color: #2c3e50;
+}
+.clients{
+	background-color:#27ae60;
+}
+.vehicule_blue{
+	background-color:#2980b9;
+	color: #ecf0f1;
+}
+.site_d_chargement{
+	background-color: #fdcb6e;
+}
+.vehicule_jaune{
+	background-color:#f1c40f;
+	color: #ecf0f1;
+}
+.vehicule_vert{
+	background-color:#27ae60;
+	color: #ecf0f1;
+}
+#get_data_vehicules{
+	height: 420px;
+}
+.padding-15{
+	padding: 15px;
+}
+#view_vehicule p{
+	font-size: 30px;
+	margin: 0px;
+	padding: 0;
+}
+
+.t_background{
+	background: #d35400;
+	color: #2c3e50;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	padding: 7px;
+}
+#view_vehicule{
+	display: none;
+}
+.color-white p,.color-white span{
+	color: #ecf0f1;
+}
+.border-gray{
+	border:3px dotted #c0392b;
+}
+.t_background_today{
+	background: #27ae60;
+	color: #2c3e50;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	padding: 7px;
+}
+.background-menu-btn{
+	background: /*#b2bec3*/#fefefe;
+}
+#drivers_modal .modal-lg,
+#myModal_demarrage_activite  .modal-lg,
+#myModal_insert_voyage .modal-lg,
+#myModal_insert_carburant .modal-lg,
+#myModal_arreter_activite .modal-lg,
+#myModal_buttons .modal-lg
+{
+    max-width: 1500px;
+}
+#drivers_modal .modal-dialog,
+#myModal_demarrage_activite .modal-dialog,
+#myModal_insert_voyage .modal-dialog,
+#myModal_insert_carburant .modal-dialog,
+#myModal_arreter_activite .modal-dialog,
+#myModal_buttons .modal-dialog{
+	width: 1100px;
+}
+#drivers_modal .modal-ku,
+#myModal_demarrage_activite .modal-ku,
+#myModal_insert_voyage .modal-ku,
+#myModal_insert_carburant .modal-ku,
+#myModal_arreter_activite .modal-ku,
+#myModal_buttons .modal-ku{
+  width: 850px;
+  margin: auto;
+}
+#drivers_modal .modal-header p,#drivers_modal .modal-header p span{
+	font-size: 22px;
+	color: #d63031;
+}
+.cal_btns button{
+		height: 82px;
+		font-size: 40px;
+}
+.cal_btns .row{
+	margin-top: 15px;
+}
+.km_depart_class,
+#poids_total_insert_p,
+#nbr_voyage_insert_p,
+.insert_carburant_p,
+.insert_carburant_p span,
+.km_fin_class,
+.km_fin_class span{
+	font-size: 50px;
+	font-weight: bold;
+	color: #2c3e50;
+}
+#myModal_myAlert .modal {
+    z-index: 1055;
+}
+#myModal_insert_voyage #poids_svg,
+#myModal_insert_carburant #svg_litres_id{
+	box-shadow : 5px 5px 2px #3498db;
+	border : 5px solid #3498db
+}
+.bootstrap-timepicker-widget.dropdown-menu {
+    z-index: 1050!important;
+}
+.p_buttons{
+	font-size: 20px;
+	color: #d35400;
+	font-weight: bold;
+	border: 1px solid #f39c12;
+	border-radius: 7px;
+	padding: 5px;
+}
+#myModal_demarrage_activite .modal-body {
+    padding-bottom: 0;
+		padding-top: 0;
+}
+#myModal_demarrage_activite .cal_btns button {
+    height: 60px;
+}
+#myModal_insert_carburant .cal_btns button {
+    height: 60px;
+}
+#myModal_insert_voyage .cal_btns button {
+    height: 60px;
+}
+#myModal_insert_voyage .modal-body {
+    padding-bottom: 0;
+		padding-top: 0;
+}
+#myModal_arreter_activite .modal-body {
+    padding-bottom: 0;
+		padding-top: 0;
+}
+#myModal_arreter_activite .cal_btns button {
+    height: 60px;
+}
+#h2_camions{
+	background-color: #f39c12;
+	color: #0984e3;
+	font-size: 35px;
+	padding: 9px;
+	letter-spacing: 1.5px;
+}
+fieldset{
+ border: 1px solid black;
+ padding: 3px;
+}
+#select_fin_heur{
+	font-size: 40px;
+}
+#myModal_myAlert.modal {
+    z-index: 1055;
+}

@@ -17,7 +17,7 @@ class UserModel extends Model{
 
 			if(    $post['name'] == '' 
 				|| $post['password'] == ''
-			    || $post['email']){
+			    || $post['email'] == ''){
 				messages::setMsg('Please Fill in All Fields','error');
 				return;
 			}

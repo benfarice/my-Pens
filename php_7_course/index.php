@@ -101,6 +101,7 @@ $Cake2 = new cake;
 
 $Cake2->icing($Cake1);
 **************************************/
+/*************************************
 class cake {
 	function icing(self $thisCake){
 		echo 'Cake to ice : <br/>';
@@ -115,5 +116,191 @@ $Cake1 = new pudding;
 $Cake2 = new cake;
 
 $Cake2->icing($Cake1);
+**************************************/
+/*************************************
+function dataReturn():string{
+	return "This is what the function will give back.";
+}
+echo var_export(dataReturn());
+**************************************/
+/*************************************
+function dataReturn():int{
+	return 1993;
+}
+echo var_export(dataReturn());
+**************************************/
+/*************************************
+function dataReturn():int{
+	return "2015";
+}
+echo var_export(dataReturn()+5);
+**************************************/
+/*************************************
+function dataReturn():int{
+	return "29.36";
+}
+echo var_export(dataReturn()+5);
+**************************************/
+/*************************************
+function dataReturn():int{
+	return 56.39;
+}
+echo var_export(dataReturn()+5);
+**************************************/
+/*************************************
+function dataReturn():int{
+	return true;
+}
+echo var_export(dataReturn()+5);
+**************************************/
+/*************************************
+function dataReturn():float{
+	return true;
+}
+echo var_export(dataReturn()+5);
+**************************************/
+/*************************************
+function dataReturn():float{
+	return 21.36;
+}
+echo var_export(dataReturn()+5);
+**************************************/
+/*************************************
+function dataReturn():bool{
+	return 21.36;
+}
+echo var_export(dataReturn());
+**************************************/
+/*************************************
+function dataReturn():array{
+	return array('hello',20,31);
+}
+echo var_export(dataReturn());
+**************************************/
+/*************************************
+function dataReturn():array{
+	return array('hello'=>'k',20=>5,31=>'y');
+}
+echo var_export(dataReturn());
+**************************************/
+/*************************************
+class myOBJ {}
+function dataReturn():myOBJ{
+	return new myOBJ;
+}
+echo var_export(dataReturn());
+**************************************/
+/*************************************
+interface register {}
 
-?>
+class myOBJ implements register{}
+
+class cake implements register{}
+function dataReturn():register{
+	return new Cake;
+}
+echo var_export(dataReturn());
+**************************************/
+/*************************************
+function dataReturn():callable{
+	return  function(){};
+}
+echo var_export(dataReturn());
+**************************************/
+/*************************************
+class myOBJ{
+	function dataReturn():self{
+	echo "do something and then callback a function <br/>";
+	return  function(){
+		echo "hello";
+	};
+}
+}
+
+echo var_export(dataReturn());
+**************************************/
+/*************************************
+class myOBJ{
+	function dataReturn($object):self{
+	
+	return  $object;
+	}
+}
+
+$a = new myOBJ;
+echo var_export($a->dataReturn(new myOBJ));
+**************************************/
+/*************************************
+echo '<pre>'.json_encode($_GET,JSON_PRETTY_PRINT).'<pre>';
+
+echo $_GET['name'] ?? 'loz';
+
+echo "<hr>";
+
+echo $a ?? 5;
+
+echo "<hr>";
+
+$myVar = $_GET['name'] ?? 'foe';
+
+echo $myVar;
+**************************************/
+/*************************************
+// -1 less than
+// 0 equal to
+// 1 greater than
+
+$spaceshipOperator = 2 <=> 1.2 ;
+
+echo $spaceshipOperator;
+**************************************/
+/*************************************
+// -1 less than
+// 0 equal to
+// 1 greater than
+
+$spaceshipOperator = 2 <=> "2.6" ;
+
+echo $spaceshipOperator;
+**************************************/
+/*************************************
+// -1 less than
+// 0 equal to
+// 1 greater than
+
+$spaceshipOperator = "0" <=> true ;
+
+echo $spaceshipOperator;
+**************************************/
+/*************************************
+// -1 less than
+// 0 equal to
+// 1 greater than
+
+$spaceshipOperator = array(20,20,20) <=> array(20,20,20) ;
+
+echo $spaceshipOperator;
+**************************************/
+/*************************************
+// -1 less than
+// 0 equal to
+// 1 greater than
+
+$spaceshipOperator = array(200,20,20) <=> array(20,20,20) ;
+
+echo $spaceshipOperator;
+**************************************/
+/*************************************
+// -1 less than
+// 0 equal to
+// 1 greater than
+if(array(20,20,20) <=> array(200,20,20)){
+	echo "something happened";
+}
+**************************************/
+// -1 less than
+// 0 equal to
+// 1 greater than
+if((array(200,20,20) <=> array(20,20,20))===1){
+	echo "greater than";
+}

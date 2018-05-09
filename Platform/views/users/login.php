@@ -1,5 +1,6 @@
-
- 
+ <body data-open="click" data-menu="vertical-menu" data-col="1-column" class="vertical-layout vertical-menu 1-column  blank-page blank-page">
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="app-content content container-fluid">
       <div class="content-wrapper">
         <div class="content-header row">
         </div>
@@ -8,22 +9,21 @@
         <div class="card border-grey border-lighten-3 m-0">
             <div class="card-header no-border">
                 <div class="card-title text-xs-center">
-                    <div class="p-1"><img width="250px" src="../app-assets/images/logo/robust-logo-dark-big.png" alt="branding logo"></div>
+                    <div class="p-1"><img width="250px" src="<?php echo ROOT_URL; ?>/app-assets/images/logo/robust-logo-dark-big.png" alt="branding logo"></div>
                 </div>
                 <h6 class="card-subtitle line-on-side text-muted text-xs-center font-small-3 pt-2"><span>Login with Huobo</span></h6>
             </div>
             <div class="card-body collapse in">
                 <div class="card-block">
-                    <form class="form-horizontal form-simple" action="<?php $_SERVER['PHP_SELF']; ?>"  
-                    method="post" novalidate>
+                    <form class="form-horizontal form-simple" action="<?php $_SERVER['PHP_SELF']; ?>" novalidate method="post">
                         <fieldset class="form-group position-relative has-icon-left mb-0">
-                            <input type="text" class="form-control form-control-lg input-lg" id="user-name" placeholder="Your Username" required name="username">
+                            <input type="text" class="form-control form-control-lg input-lg" name="username" id="user-name" placeholder="Your Username" required>
                             <div class="form-control-position">
                                 <i class="icon-head"></i>
                             </div>
                         </fieldset>
                         <fieldset class="form-group position-relative has-icon-left">
-                            <input type="password" class="form-control form-control-lg input-lg" id="user-password" placeholder="Enter Password" required name="password">
+                            <input type="password" name="password" class="form-control form-control-lg input-lg" id="user-password" placeholder="Enter Password" required>
                             <div class="form-control-position">
                                 <i class="icon-key3"></i>
                             </div>
@@ -52,7 +52,7 @@
 
         </div>
       </div>
-
+    </div>
     <!-- ////////////////////////////////////////////////////////////////////////////-->
 
-  
+  </body>

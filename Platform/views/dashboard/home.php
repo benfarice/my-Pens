@@ -1,3 +1,4 @@
+ <body data-open="click" data-menu="vertical-menu" data-col="2-columns" class="vertical-layout vertical-menu 2-columns  fixed-navbar">
 
     <!-- navbar-fixed-top-->
     <nav class="header-navbar navbar navbar-with-menu navbar-fixed-top navbar-semi-dark navbar-shadow">
@@ -5,7 +6,7 @@
         <div class="navbar-header">
           <ul class="nav navbar-nav">
             <li class="nav-item mobile-menu hidden-md-up float-xs-left"><a class="nav-link nav-menu-main menu-toggle hidden-xs"><i class="icon-menu5 font-large-1"></i></a></li>
-            <li class="nav-item"><a href="index.html" class="navbar-brand nav-link"><img alt="branding logo" src="../app-assets/images/logo/robust-logo-light-big.png" data-expand="../app-assets/images/logo/robust-logo-light-big.png" data-collapse="../app-assets/images/logo/robust-logo-small.png" class="brand-logo"></a></li>
+            <li class="nav-item"><a href="index.html" class="navbar-brand nav-link"><img alt="branding logo" src="<?php echo ROOT_URL; ?>/app-assets/images/logo/robust-logo-light-big.png" data-expand="<?php echo ROOT_URL; ?>/app-assets/images/logo/robust-logo-light-big.png" data-collapse="<?php echo ROOT_URL; ?>/app-assets/images/logo/robust-logo-small.png" class="brand-logo"></a></li>
             <li class="nav-item hidden-md-up float-xs-right"><a data-toggle="collapse" data-target="#navbar-mobile" class="nav-link open-navbar-container"><i class="icon-ellipsis pe-2x icon-icon-rotate-right-right"></i></a></li>
           </ul>
         </div>
@@ -39,15 +40,12 @@
                   <li class="dropdown-menu-footer"><a href="javascript:void(0)" class="dropdown-item text-muted text-xs-center">Read all messages</a></li>
                 </ul>
               </li>
-              <li class="dropdown dropdown-user nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link dropdown-user-link"><span class="avatar avatar-online"><img src="../app-assets/images/portrait/small/avatar-s-1.png" alt="avatar"><i></i></span>
-              <span class="user-name">
-                <!--John Doe --> <?php echo $_SESSION['user_data']['username']; ?>
+              <li class="dropdown dropdown-user nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link dropdown-user-link"><span class="avatar avatar-online"><img src="<?php echo ROOT_URL; ?>/app-assets/images/portrait/small/avatar-s-1.png" alt="avatar"><i></i></span><span class="user-name">
+                <!--John Doe -->
+                <?php echo $_SESSION['user_data']['username']?>
               </span></a>
                 <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item"><i class="icon-head"></i> Edit Profile</a><a href="#" class="dropdown-item"><i class="icon-mail6"></i> My Inbox</a><a href="#" class="dropdown-item"><i class="icon-clipboard2"></i> Task</a><a href="#" class="dropdown-item"><i class="icon-calendar5"></i> Calender</a>
-                  <div class="dropdown-divider"></div>
-                  <a href="<?php echo ROOT_URL; ?>/users/logout" class="dropdown-item"><i class="icon-power3">
-                    
-                  </i> Logout</a>
+                  <div class="dropdown-divider"></div><a href="#" class="dropdown-item"><i class="icon-power3"></i> Logout</a>
                 </div>
               </li>
             </ul>
@@ -164,4 +162,5 @@
       <p class="clearfix text-muted text-sm-center mb-0 px-2"><span class="float-md-left d-xs-block d-md-inline-block">Copyright  &copy; 2018 <a href="https://huobo.org" target="_blank" class="text-bold-800 grey darken-2">Huobo University </a>, All rights reserved. </span></p>
     </footer>
 
-  
+    
+  </body>

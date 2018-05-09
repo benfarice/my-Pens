@@ -278,7 +278,7 @@
                     <div class="card-text">
                       <p></p>
                     </div>
-                    <form class="form">
+                    <form class="form" action="<?php $_SERVER['PHP_SELF']; ?>" novalidate method="post">
                       <div class="form-body">
 
                         <div class="form-group">

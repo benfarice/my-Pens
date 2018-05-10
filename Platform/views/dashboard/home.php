@@ -72,7 +72,7 @@
             </li>
             <li class=" nav-item"><a href="#"><i class="icon-stack-2"></i><span data-i18n="nav.page_layouts.main" class="menu-title">Students</span></a>
               <ul class="menu-content">
-                <li><a href="add-student.html" data-i18n="nav.page_layouts.1_column" class="menu-item">Add Student</a>
+                <li><a href="<?php echo ROOT_URL; ?>/student/add" data-i18n="nav.page_layouts.1_column" class="menu-item">Add Student</a>
                 </li>
                 <li><a href="edit-student.html" data-i18n="nav.page_layouts.2_columns" class="menu-item">Edit Student</a>
                 </li>

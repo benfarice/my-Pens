@@ -12,8 +12,8 @@
           </li>
           <li class="nav-item">
             <a href="index.html" class="navbar-brand nav-link">
-              <img alt="branding logo" src="../../app-assets/images/logo/robust-logo-light-big.png" data-expand="../../app-assets/images/logo/robust-logo-light-big.png"
-                data-collapse="../../app-assets/images/logo/robust-logo-small.png" class="brand-logo">
+              <img alt="branding logo" src="<?php echo ROOT_URL; ?>/app-assets/images/logo/robust-logo-light-big.png" data-expand="<?php echo ROOT_URL; ?>/app-assets/images/logo/robust-logo-light-big.png"
+                data-collapse="<?php echo ROOT_URL; ?>/app-assets/images/logo/robust-logo-small.png" class="brand-logo">
             </a>
           </li>
           <li class="nav-item hidden-md-up float-xs-right">
@@ -93,7 +93,7 @@
                 <li class="dropdown dropdown-user nav-item">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link dropdown-user-link">
                     <span class="avatar avatar-online">
-                      <img src="../../app-assets/images/portrait/small/avatar-s-1.png" alt="avatar">
+                      <img src="<?php echo ROOT_URL; ?>/app-assets/images/portrait/small/avatar-s-1.png" alt="avatar">
                       <i></i>
                     </span>
                     <span class="user-name">
@@ -147,7 +147,7 @@
           </a>
           <ul class="menu-content">
             <li>
-              <a href="add-student.html" data-i18n="nav.page_layouts.1_column" class="menu-item">Add Student</a>
+              <a href="<?php echo ROOT_URL; ?>/student/add" data-i18n="nav.page_layouts.1_column" class="menu-item">Add Student</a>
             </li>
             <li>
               <a href="edit-student.html" data-i18n="nav.page_layouts.2_columns" class="menu-item">Edit Student</a>
@@ -290,12 +290,12 @@
                           <label>Gender</label>
                           <div class="input-group">
                             <label class="display-inline-block custom-control custom-radio ml-1">
-                              <input type="radio" name="customer" class="custom-control-input">
+                              <input type="radio" name="student_gender" value="male" class="custom-control-input">
                               <span class="custom-control-indicator"></span>
                               <span class="custom-control-description ml-0">Male</span>
                             </label>
                             <label class="display-inline-block custom-control custom-radio">
-                              <input type="radio" name="customer" checked class="custom-control-input">
+                              <input type="radio" name="student_gender" value="female" checked class="custom-control-input">
                               <span class="custom-control-indicator"></span>
                               <span class="custom-control-description ml-0">Female</span>
                             </label>
@@ -310,7 +310,7 @@
 
                         <div class="form-group">
                           <label for="eventRegInput3">Full Name</label>
-                          <input type="text" id="eventRegInput3" class="form-control" placeholder="full name" name="company">
+                          <input type="text" id="eventRegInput3" class="form-control" placeholder="full name" name="parent_name">
                         </div>
 
 
@@ -322,24 +322,24 @@
 
                         <div class="form-group">
                           <label for="eventRegInput5">Phone Number</label>
-                          <input type="tel" id="eventRegInput5" class="form-control" name="phone number" placeholder="contact number">
+                          <input type="tel" id="eventRegInput5" class="form-control" name="phone_number" placeholder="contact number">
                         </div>
 
                         <div class="form-group">
                           <label for="eventRegInput3">Wechat ID</label>
-                          <input type="text" id="eventRegInput3" class="form-control" placeholder="wechat ID" name="company">
+                          <input type="text" id="eventRegInput3" class="form-control" placeholder="wechat ID" name="Wechat">
                         </div>
 
                         <div class="form-group">
                           <label>Existing Customer</label>
                           <div class="input-group">
                             <label class="display-inline-block custom-control custom-radio ml-1">
-                              <input type="radio" name="customer" class="custom-control-input">
+                              <input type="radio" name="Existing_Customer" value="yes" class="custom-control-input">
                               <span class="custom-control-indicator"></span>
                               <span class="custom-control-description ml-0">Yes</span>
                             </label>
                             <label class="display-inline-block custom-control custom-radio">
-                              <input type="radio" name="customer" checked class="custom-control-input">
+                              <input type="radio" name="Existing_Customer" value="no" checked class="custom-control-input">
                               <span class="custom-control-indicator"></span>
                               <span class="custom-control-description ml-0">No</span>
                             </label>
@@ -351,7 +351,7 @@
                         <button type="button" class="btn btn-warning mr-1">
                           <i class="icon-cross2"></i> Cancel
                         </button>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" name="submit" class="btn btn-primary">
                           <i class="icon-check2"></i> Save
                         </button>
                       </div>

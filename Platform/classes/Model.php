@@ -55,6 +55,14 @@ abstract class Model{
 		return $this->stmt->fetch(PDO::FETCH_ASSOC);
 	}
 
+	public function errorInfo_func(){
+			if (!$this->stmt) {
+			   echo "\nPDO::errorInfo():\n";
+			   print_r($this->dbh->errorInfo());
+			}
+	}
+		
+
 }
 
 

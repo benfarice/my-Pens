@@ -9,8 +9,15 @@ class Users extends Controller{
 	}
 
 	protected function login(){
-		$viewmodel = new UserModel();
-		$this->returnView($viewmodel->login(),true);
+		
+
+		if(!isset($_SESSION['is_logged_in'])){
+			$viewmodel = new UserModel();
+			$this->returnView($viewmodel->login(),true);
+
+		}else{
+			header('Location: '.ROOT_URL.'/dashboard/home');
+		}
 	}
 
 	protected function logout(){

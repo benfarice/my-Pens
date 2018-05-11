@@ -79,5 +79,12 @@
     <!--<div class="app-content content container-fluid">
         
     </div>-->
+    <?php 
+    if(isset($_SESSION['is_logged_in'])){
+    include ('includes/nav.php'); 
+    include ('includes/nav_header.php');
+    }
+    ?>
+   
      <?php require($view); ?>
 </html>
